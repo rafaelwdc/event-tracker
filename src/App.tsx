@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+// import React, { useState } from 'react';
 import style from './App.module.scss';
 import Card from './components/Card';
 import Formulario from './components/Formulario';
@@ -26,7 +26,7 @@ function App() {
   //   }
   // ])
 
-  const [filtro, setFiltro] = useState<Date | null>()
+  // const [filtro, setFiltro] = useState<Date | null>()
 
   const adicionarEvento = (evento: IEvento) => {
     evento.id = Math.round((new Date()).getTime() / 1000)
@@ -47,7 +47,7 @@ function App() {
   }
 
   const aplicarFiltro = (data: Date | null) => {
-    setFiltro(data)
+    // setFiltro(data)
   }
 
   // const filtrados = !filtro
@@ -61,7 +61,7 @@ function App() {
       <div className={style.App}>
         <div className={style.Coluna}>
           <Card>
-            <Formulario aoSalvar={adicionarEvento} />
+            <Formulario />
           </Card>
           <hr />
           <Card>
