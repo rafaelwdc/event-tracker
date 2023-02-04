@@ -10,21 +10,20 @@ function App() {
 
   const [eventos, setEventos] = useState<IEvento[]>([
     {
-        "descricao": "Estudar React",
-        "inicio": new Date("2022-01-15T09:00"),
-        "fim": new Date("2022-01-15T13:00"),
-        "completo": false,
-        "id": 1642342747
+      "descricao": "Estudar React",
+      "inicio": new Date("2022-01-15T09:00"),
+      "fim": new Date("2022-01-15T13:00"),
+      "completo": false,
+      "id": 1642342747
     },
     {
-        "descricao": "Estudar Recoil",
-        "inicio": new Date("2022-01-16T09:00"),
-        "fim": new Date("2022-01-16T11:00"),
-        "completo": false,
-        "id": 1642342959
+      "descricao": "Estudar Recoil",
+      "inicio": new Date("2022-01-16T09:00"),
+      "fim": new Date("2022-01-16T11:00"),
+      "completo": false,
+      "id": 1642342959
     }
-])
-
+  ])
 
   const [filtro, setFiltro] = useState<Date | null>()
 
@@ -32,7 +31,7 @@ function App() {
     evento.id = Math.round((new Date()).getTime() / 1000)
     eventos.push(evento)
     console.log(eventos);
-    
+
     setEventos([...eventos])
   }
   const alterarStatusEvento = (id: number) => {
