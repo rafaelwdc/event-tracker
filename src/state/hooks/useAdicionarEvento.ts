@@ -4,7 +4,9 @@ import { obterID } from "../../util"
 import { listaDeEventosState } from "../atom"
 
 const useAdicionarEvento = () => {
+
     const setListaDeEventos = useSetRecoilState<IEvento[]>(listaDeEventosState) 
+
     return (evento: IEvento) => {
         const hoje = new Date()
         if(evento.inicio < hoje) {
