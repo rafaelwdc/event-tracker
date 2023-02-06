@@ -5,10 +5,12 @@ import { RecoilRoot } from 'recoil'
 import ListaDeEventos from './components/ListaDeEventos';
 import Calendario from './components/Calendario';
 import { Suspense } from 'react';
+import DebugObserver from './components/DebugObserver';
 
 function App() {
   return (
     <RecoilRoot>
+      <DebugObserver />
       <Suspense fallback="Está carregando">
         <div className={style.App}>
           <div className={style.Coluna}>
