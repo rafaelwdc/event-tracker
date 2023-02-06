@@ -12,12 +12,12 @@ const Filtro: React.FC = () => {
   const submeterForm = (evento: React.FormEvent<HTMLFormElement>) => {
     evento.preventDefault()
     const filtro: IFiltroDeEventos = {}
-    if(data) {
+    if (data) {
       filtro.data = new Date(data);
     } else {
       filtro.data = null
     }
-    setFiltroDeEvento(filtro)
+    setFiltroDeEvento(filtro);    
   }
 
   return (<form className={style.Filtro} onSubmit={submeterForm}>
